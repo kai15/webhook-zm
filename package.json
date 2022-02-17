@@ -2,14 +2,11 @@
   "name": "webhook-zm",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [
-    "heroku"
-  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +16,15 @@
     "express": "^4.17.3",
     "mysql2": "^2.3.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kai15/webhook-zm.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "engines": {
     "node": "14.x"
   }
