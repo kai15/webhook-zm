@@ -1,9 +1,11 @@
 const http = require('http');
 const express = require('express')
+const cors = require('cors')
 // Create a new instance of express
 const app = express()
 const port = 8007
 // Globals
+app.use(cors());
 app.set('connection', require('./connection'))
 
 app.post('/zoom-webhook', async (req, res) => {
@@ -20,12 +22,10 @@ app.post('/zoom-webhook', async (req, res) => {
     res.json({"response":"ok"});
 });
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
-});
+// const server = http.createServer((req, res) => {
+//     res.statusCode = 200;
+//     res.setHeader('Content-Type', 'text/plain');
+//     res.end('Hello World');
+// });
 
-server.listen(port, () => {
-    console.log(`Server running at ${port}`);
-});
+app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
