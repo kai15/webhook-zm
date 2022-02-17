@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node server.js",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "AIL",
   "license": "ISC",
   "dependencies": {
     "async": "^3.2.3",
@@ -26,6 +26,6 @@
     "express"
   ],
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   }
 }
