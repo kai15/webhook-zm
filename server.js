@@ -6,7 +6,7 @@ const app = express()
 const port = 8007
 // Globals
 app.use(cors());
-app.set('connection', require('./connection'))
+// app.set('connection', require('./connection'))
 
 app.post('/zoom-webhook', async (req, res) => {
     // let _connection = await req.app.get('connection');
