@@ -37,7 +37,7 @@ app.get('/', (req, res) => res.send('<h2> Hello World! </h2>'));
 app.set('connection', require('./connection'))
 app.post('/zoom-webhook', (req, res) => {
     // let _connection = await req.app.get('connection');
-    console.log("payload =>", JSON.stringify(req));
+    console.log("payload =>", (req));
     // try {
     //     _connection.query("INSERT INTO `fammi`.`zoom_participants`(zoom_id, email, name, join_time, created) \
 	// 		VALUE(?, ?, ?, ?, ?)",
