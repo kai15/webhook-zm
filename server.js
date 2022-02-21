@@ -37,17 +37,17 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('<h2> Hello World! </h2>'));
 app.set('connection', require('./connection'))
 app.post('/zoom-webhook', async (req, res) => {
-    var md5 = require('md5')
-    let _connection = await req.app.get('connection');
+    // var md5 = require('md5')
+    // let _connection = await req.app.get('connection');
     console.log("payload =>", JSON.stringify(req.body.payload));
-    try {
-        _connection.query("INSERT INTO `fammi`.`zoom_participants`(id, zoom_id, email, name, join_time, created) \
-			VALUE(?, ?, ?, ?, ?, now())",
-            [md5(md5(Math.random())), req.body.payload.object.id, req.body.payload.object.participant.email, req.body.payload.object.participant.user_name, req.body.payload.object.participant.join_time])
-    }catch (e) {
-        console.log('error')
-        console.log(e.message)
-    }
+    // try {
+    //     _connection.query("INSERT INTO `fammi`.`zoom_participants`(id, zoom_id, email, name, join_time, created) \
+	// 		VALUE(?, ?, ?, ?, ?, now())",
+    //         [md5(md5(Math.random())), req.body.payload.object.id, req.body.payload.object.participant.email, req.body.payload.object.participant.user_name, req.body.payload.object.participant.join_time])
+    // }catch (e) {
+    //     console.log('error')
+    //     console.log(e.message)
+    // }
     res.json({"response":"ok"});
 });
 
